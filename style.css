@@ -731,6 +731,13 @@
     background: #31349513;
   }
   
+  .about-image img {
+    display: block;   /* S'assurer que l'image est visible */
+    height: 800px;    /* Ajuste la hauteur de l'image à 150px (ou toute autre valeur) */
+    width: 700px;      /* La largeur s'ajustera automatiquement pour maintenir les proportions */
+    margin: 0 auto;   /* Centrer l'image si nécessaire */
+  }
+  
   .about-card:hover {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
@@ -903,6 +910,7 @@
   .projects__main-container {
     margin: 5rem 0 2rem 0;
     padding: 2rem 0;
+    margin-top: 50px;
   }
   
   .projects__cards {
@@ -1600,7 +1608,8 @@
   }
   .freelancing__col .freelancing-image {
     height: 100%;
-    width: 100%;
+    width: 65%;
+    margin-left: 50px;
   }
   .freelancing__col .freelancing-image img {
     width: 100%;
