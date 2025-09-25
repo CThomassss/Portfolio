@@ -1,5 +1,4 @@
- 
-  /* =========== Hero Sectiomn ============  */
+/* =========== Hero Sectiomn ============  */
   
   .hero__container {
     padding: 5rem 0 2rem 0;
@@ -585,10 +584,38 @@
     font-family: var(--outfit-font-family);
   }
   
+  /* Contact Cards Container */
+.contact__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Contact Card */
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px; /* Ajuste selon le besoin visuel */
+  height: 100%;
+  background: #31349513;
+  border: 1px solid #a4a7ff6b;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+.contact__card:hover {
+  transform: translateY(-10px) scale(0.99);
+  background: #31349523;
+}
+
   .contact__cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
+    -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     -webkit-box-align: center;
@@ -1022,3 +1049,71 @@
     background: linear-gradient(to right, #2058ff, #7698ff);
     transform: scale(0.98);
   }
+
+  /* Projects Cards Container */
+.projects__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+/* Projects Card */
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px; /* Ajuste selon le besoin visuel */
+  height: 100%;
+  background: #31349513;
+  border: 1px solid #a4a7ff7d;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.projects__card:hover {
+  transform: translateY(-10px);
+  background: #31349523;
+}
+
+/* Pour que l'image ne déforme pas la card */
+.project-image {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Card Header */
+.card-header {
+  margin-bottom: 1rem;
+}
+
+/* Card Description */
+.card-description {
+  flex: 1;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Card Buttons */
+.cards-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
