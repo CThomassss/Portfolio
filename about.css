@@ -209,41 +209,38 @@
     gap: 1rem;
   }
   .flow-bar {
-    gap: 0;
+    position: relative;
+    grid-column: 1 / -1;
+    height: 16px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  .flow-bar .timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 6px;
+    width: 83%; /* S'arrête entre 2025 et 2026 */
+    background: #36a8ff;
+    border-radius: 3px;
+    z-index: 1;
   }
   .flow-bar span {
-    display: inline-block;
-    height: 10px;
-    width: 100%;
-    background: #192f5c;
-    margin-bottom: 2rem;
     position: relative;
-  }
-  .flow-bar span::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: -5px;
-    height: 15px;
-    width: 15px;
+    z-index: 2;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
     background: var(--primary-color);
     border-radius: 50%;
+    margin-right: calc((83% - 48px) / 2); /* espace entre les points */
   }
-  .flow-bar span:last-of-type::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: -5px;
-    height: 15px;
-    width: 15px;
-    background: var(--primary-color);
-    border-radius: 50%;
+  .flow-bar span:not(:last-child) {
+    margin-right: calc((83% - 48px) / 2);
+  }
+  .flow-bar span:last-child {
+    margin-right: 0;
   }
   .flow-describe {
     background: #14233f37;
@@ -364,6 +361,12 @@
   }
   .progress__bar.figma::after {
     width: 50%;
+  }
+  .progress__bar.c::after {
+    width: 90%;
+  }
+  .progress__bar.linux::after {
+    width: 95%;
   }
   
   .tech__col.right {
