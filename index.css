@@ -1,7 +1,7 @@
 /* =========== Hero Sectiomn ============  */
   
   .hero__container {
-    padding: 5rem 0 2rem 0;
+    padding: 2rem 0 2rem 0; /* réduit le padding-top */
     /* height: 100vh; */
   }
   .hero__row {
@@ -395,37 +395,10 @@
     align-items: center;
   }
   .about-col.left {
-    height: 100%;
-    width: 100%;
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(64, 0, 143, 0.09)),
-      to(rgba(39, 92, 183, 0.09))
-    );
-    background: -o-linear-gradient(
-      bottom,
-      rgba(64, 0, 143, 0.09),
-      rgba(39, 92, 183, 0.09)
-    );
-    background: linear-gradient(
-      to top,
-      rgba(64, 0, 143, 0.09),
-      rgba(39, 92, 183, 0.09)
-    );
-    border-radius: 2rem;
-    /* overflow: hidden; */
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 450px; /* fixe la hauteur de l'encadré */
     display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    align-items: center;
     justify-content: center;
-    position: relative;
   }
   
   .about-col.right {
@@ -458,11 +431,20 @@
     background: #31349513;
   }
   
+  .about-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .about-image img {
-    display: block;   /* S'assurer que l'image est visible */
-    height: 800px;    /* Ajuste la hauteur de l'image à 150px (ou toute autre valeur) */
-    width: 700px;      /* La largeur s'ajustera automatiquement pour maintenir les proportions */
-    margin: 0 auto;   /* Centrer l'image si nécessaire */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    display: block;
   }
   
   .about-card:hover {
@@ -1116,4 +1098,24 @@
   display: flex;
   gap: 1rem;
   margin-top: auto;
+}
+
+body {
+  /* ...existing code... */
+  transform: scale(0.8);
+  transform-origin: top center;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.site-wrapper {
+  width: 1250px; /* ou max-width: var(--max-width); */
+  margin: 0 auto;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 2rem auto 1rem auto; /* réduit le margin-top */
 }

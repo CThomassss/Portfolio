@@ -55,8 +55,12 @@
     --bg-color: #050d20;
     --bg-light-color: #f5f5f5;
     --p-color: #ffffffd2;
-  
-    scroll-padding: 10em;
+    transform: scale(0.8);
+    transform-origin: top center;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
   }
   
   body.dark {
@@ -251,7 +255,7 @@
     gap: 3rem;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: stretch;
   }
   
   .projects__card {
@@ -264,6 +268,11 @@
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
     transition: var(--transition);
+    min-height: 520px; /* Hauteur minimale identique pour toutes les cards */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .projects__card:hover {
@@ -505,4 +514,9 @@
     -webkit-transform: translateX(-50%) translateY(-5px) scale(0.96);
     -ms-transform: translateX(-50%) translateY(-5px) scale(0.96);
     transform: translateX(-50%) translateY(-5px) scale(0.96);
+  }
+
+  .site-wrapper {
+    width: 1250px;
+    margin: 0 auto;
   }
